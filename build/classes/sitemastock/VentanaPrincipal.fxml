@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sitemastock.VentanaPrincipalController">
+   <children>
+     <Button fx:id="caja" layoutX="181.0" layoutY="169.0" mnemonicParsing="false" onAction="#ventas" prefHeight="32.0" prefWidth="144.0" text="CAJA">
+       <tooltip>
+         <Tooltip text="Registrar una venta, caja diaria, facturación" />
+       </tooltip>
+     </Button>
+     <Button layoutX="184.0" layoutY="334.0" mnemonicParsing="false" onAction="#ventanaProductos" prefHeight="32.0" prefWidth="138.0" text="PRODUCTO">
+       <tooltip>
+         <Tooltip text="Agregar, eliminar o modificar productos" />
+       </tooltip>
+     </Button>
+     <Button fx:id="clientes" layoutX="181.0" layoutY="252.0" mnemonicParsing="false" onAction="#pasarCliente" prefHeight="32.0" prefWidth="144.0" text="CLIENTE">
+       <tooltip>
+         <Tooltip text="Agregar, eliminar o modfificar clientes" />
+       </tooltip>
+     </Button>
+     <Button fx:id="administrador" layoutX="631.0" layoutY="334.0" mnemonicParsing="false" onAction="#ventanaAdmin" prefHeight="32.0" prefWidth="138.0" text="ADMINISTRADOR">
+       <tooltip>
+         <Tooltip text="Dar de alta, baja o modificar usuarios" />
+       </tooltip>
+     </Button>
+     <Button fx:id="salir" layoutX="811.0" layoutY="515.0" mnemonicParsing="false" onAction="#salir" prefWidth="138.0" text="SALIR">
+       <tooltip>
+         <Tooltip text="Salir del Programa" />
+       </tooltip>
+     </Button>
+     <Button layoutX="631.0" layoutY="252.0" mnemonicParsing="false" onAction="#ventanaEstadistica" prefWidth="138.0" text="ESTADISTICAS">
+       <tooltip>
+         <Tooltip text="Ver estadisticas de Venta" />
+       </tooltip>
+     </Button>
+     <Separator layoutX="477.0" layoutY="154.0" orientation="VERTICAL" prefHeight="314.0" prefWidth="29.0" />
+     <Separator layoutX="291.0" layoutY="305.0" prefWidth="200.0" />
+     <Text layoutX="408.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ventana Principal">
+       <font>
+         <Font size="24.0" />
+       </font>
+     </Text>
+     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="48.0" layoutX="283.0" layoutY="32.0" opacity="0.08" stroke="BLACK" strokeType="INSIDE" strokeWidth="1.2" width="417.0" />
+     <CubicCurve controlX1="66.0" controlX2="65.0" controlY1="-73.0" controlY2="33.0" endX="79.0" endY="-24.0" fill="#008799" layoutX="721.0" layoutY="450.0" opacity="0.33" startX="-143.0" startY="22.0" stroke="BLACK" />
+     <ImageView fitHeight="48.0" fitWidth="117.0" layoutX="83.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+       <image>
+         <Image url="@../caja.png" />
+       </image>
+     </ImageView>
+     <ImageView fitHeight="57.0" fitWidth="69.0" layoutX="91.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
+       <image>
+         <Image url="@../cliente.png" />
+       </image>
+     </ImageView>
+     <ImageView fitHeight="57.0" fitWidth="46.0" layoutX="94.0" layoutY="323.0" pickOnBounds="true" preserveRatio="true">
+       <image>
+         <Image url="@../producto.png" />
+       </image>
+     </ImageView>
+     <ImageView fitHeight="57.0" fitWidth="62.0" layoutX="532.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
+       <image>
+         <Image url="@../estadistica.png" />
+       </image>
+     </ImageView>
+      <Button fx:id="proovedor" layoutX="184.0" layoutY="418.0" mnemonicParsing="false" onAction="#AgregarProovedor" prefHeight="32.0" prefWidth="138.0" text="PROOVEDOR">
+         <tooltip>
+            <Tooltip text="Registrar un proovedor" />
+         </tooltip>
+      </Button>
+      <Button layoutX="633.0" layoutY="169.0" mnemonicParsing="false" onAction="#ventanaCajaDiaria" prefHeight="32.0" prefWidth="134.0" text="CAJA DIARIA" />
+      <DatePicker fx:id="fechaActual" layoutX="795.0" layoutY="89.0" onAction="#cambiarFecha" prefHeight="23.0" prefWidth="184.0" />
+      <Label layoutX="708.0" layoutY="89.0" prefHeight="23.0" prefWidth="80.0" text="Fecha Actual" />
+   </children>
+  <stylesheets>
+    <URL value="@ventanaprincipal.css" />
+  </stylesheets>
+</AnchorPane>

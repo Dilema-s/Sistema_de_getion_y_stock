@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="datos" prefHeight="700.0" prefWidth="1200.0" styleClass="body" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sitemastock.VentanaAdminController">
+  <children>
+    <TableView fx:id="tableView" editable="true" layoutX="238.0" layoutY="93.0" prefHeight="231.0" prefWidth="742.0" AnchorPane.leftAnchor="238.0" AnchorPane.rightAnchor="221.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="203.0" text="Nombre">
+          <cellValueFactory>
+            <PropertyValueFactory property="Nombre" />
+          </cellValueFactory>
+        </TableColumn>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="191.0" text="Apellido">
+          <cellValueFactory>
+            <PropertyValueFactory property="Apellido" />
+          </cellValueFactory>
+        </TableColumn>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="181.0" text="Nombre de Usuario">
+          <cellValueFactory>
+            <PropertyValueFactory property="Usuario" />
+          </cellValueFactory>
+        </TableColumn>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="164.0" text="Contraseña">
+          <cellValueFactory>
+            <PropertyValueFactory property="Contraseña" />
+          </cellValueFactory>
+        </TableColumn>
+      </columns>
+    </TableView>
+    <Separator layoutX="372.0" layoutY="51.0" prefHeight="20.999900000002526" prefWidth="457.0" />
+    <Text layoutX="451.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuarios Activos del sistema">
+      <font>
+        <Font size="24.0" />
+      </font>
+    </Text>
+    <Button fx:id="conectar" layoutX="541.0" layoutY="369.0" mnemonicParsing="false" onAction="#modificar" prefHeight="32.0" prefWidth="151.0" text="Modificar Usuario" textFill="BLACK">
+      <font>
+        <Font size="14.0" fx:id="x1" />
+      </font>
+      <tooltip>
+        <Tooltip text="Modifica los datos de un usuario ya existente" />
+      </tooltip>
+    </Button>
+    <Button font="$x1" layoutX="352.0" layoutY="369.0" mnemonicParsing="false" onAction="#ventanaAgregar" prefHeight="32.0" prefWidth="151.0" text="Agregar Usuario" textFill="BLACK">
+      <tooltip>
+        <Tooltip text="Agrega un usuario Nuevo" />
+      </tooltip>
+    </Button>
+    <Button font="$x1" layoutX="916.0" layoutY="611.0" mnemonicParsing="false" onAction="#volver" prefHeight="32.0" prefWidth="151.0" text="Volver">
+      <tooltip>
+        <Tooltip text="Volver a página anterior" />
+      </tooltip>
+    </Button>
+    <Button font="$x1" layoutX="715.0" layoutY="369.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="32.0" prefWidth="157.0" text="Eliminar Usuario" textFill="#ff3333">
+      <tooltip>
+        <Tooltip text="Elimina un usuario de la lista" />
+      </tooltip>
+    </Button>
+    <Separator layoutX="329.0" layoutY="405.0" prefHeight="21.0" prefWidth="561.0" />
+      <Button layoutX="181.0" layoutY="579.0" mnemonicParsing="false" onAction="#datosMonotributo" prefHeight="32.0" prefWidth="217.0" text="DATOS MONOTRIBUTO" />
+      <Text layoutX="130.0" layoutY="551.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Configure los Datos de su Empresa" underline="true" wrappingWidth="354.142578125">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+  </children>
+  <stylesheets>
+    <URL value="@AgregarUsuario.css" />
+  </stylesheets>
+</AnchorPane>

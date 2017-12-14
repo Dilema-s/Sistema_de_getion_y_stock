@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sitemastock.VentanaCuentaCorriente">
+   <children>
+      <TableView fx:id="tableView" layoutX="252.0" layoutY="127.0" prefHeight="382.0" prefWidth="696.0">
+        <columns>
+          <TableColumn prefWidth="150.0" text="Numero de Venta" >
+              
+               <cellValueFactory>
+                    <PropertyValueFactory property="id_venta" />
+                </cellValueFactory>
+         </TableColumn>
+          <TableColumn minWidth="0.0" prefWidth="150.0" text="Fecha" >
+              <cellValueFactory>
+                    <PropertyValueFactory property="fecha" />
+                </cellValueFactory>
+         </TableColumn>
+            <TableColumn prefWidth="158.0" text="Monto final" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="total" />
+                </cellValueFactory>
+         </TableColumn>
+            <TableColumn prefWidth="236.0" text="Atendido por:" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="usuario" />
+                </cellValueFactory>
+         </TableColumn>
+        </columns>
+      </TableView>
+      <Text fill="#cd0d0d" layoutX="440.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CUENTA CORRIENTE" underline="true">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Text>
+      <Text layoutX="66.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cliente:" underline="true" wrappingWidth="75.7060546875">
+         <font>
+            <Font name="Arial" size="22.0" />
+         </font>
+      </Text>
+      <Label fx:id="nombre_cliente" layoutX="165.0" layoutY="62.0" prefHeight="28.0" prefWidth="268.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Pane layoutX="554.0" layoutY="533.0" prefHeight="136.0" prefWidth="614.0">
+         <children>
+            <Button fx:id="volver" onAction="#volver"  layoutX="508.0" layoutY="57.0" mnemonicParsing="false" text="Volver">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="22.0" layoutY="76.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="190.0" text="Imprimir Deuda">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button onAction="#detalleVenta"  layoutX="22.0" layoutY="21.0" mnemonicParsing="false" text="Ver detalles de venta">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button onAction="#pagarDeuda"  layoutX="233.0" layoutY="76.0" mnemonicParsing="false" text="Saldar deuda">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Separator layoutX="462.0" layoutY="12.0" orientation="VERTICAL" prefHeight="113.0" prefWidth="6.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="66.0" layoutY="524.0" prefHeight="136.0" prefWidth="481.0">
+         <children>
+            <Text fill="#e80303" layoutX="27.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deuda Total:" underline="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Label fx:id="deuda_total" layoutX="139.0" layoutY="48.0" prefHeight="74.0" prefWidth="243.0">
+               <font>
+                  <Font size="51.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="475.0" prefWidth="626.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="sitemastock.EditarProovedor">
+    <children>
+    <Button layoutX="505.0" layoutY="380.0" mnemonicParsing="false" onAction="#volver" prefHeight="37.0" prefWidth="77.0" text="Volver">
+      <font>
+        <Font size="16.0" fx:id="x1" />
+      </font>
+      <tooltip>
+        <Tooltip text="Vuelve a la lista de clientes" />
+      </tooltip>
+    </Button>
+    <GridPane layoutX="112.0" layoutY="127.0" prefHeight="209.0" prefWidth="377.0">
+      <children>
+        <Label font="$x1" prefHeight="25.0" prefWidth="164.0" text="Ingrese Razon Social" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Label font="$x1" prefWidth="123.0" text="Ingrese Telefono" GridPane.rowIndex="1" />
+        <Label font="$x1" text="Ingrese Dirección" GridPane.rowIndex="2" />
+        <Label font="$x1" prefWidth="123.0" text="Ingrese Email" GridPane.rowIndex="3" />
+        <TextField fx:id="razon_social" prefHeight="30.0" prefWidth="188.0" promptText="DNI" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <TextField fx:id="telefono" prefHeight="30.0" prefWidth="188.0" promptText="Telefono" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField fx:id="direccion" prefHeight="30.0" prefWidth="188.0" promptText="direccion" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <TextField fx:id="mail" prefHeight="30.0" prefWidth="188.0" promptText="Email" text="yo@mail.com" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+    <Button font="$x1" layoutX="505.0" layoutY="318.0" mnemonicParsing="false" onAction="#modificarDatos" text="Aceptar">
+      <tooltip>
+        <Tooltip text="Envia los cambios realizados" />
+      </tooltip>
+    </Button>
+    <Text layoutX="212.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Editar Proovedor">
+      <font>
+        <Font size="24.0" />
+      </font>
+    </Text>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="87.0" layoutX="21.0" layoutY="311.0" opacity="0.13" stroke="BLACK" strokeType="INSIDE" width="468.0" />
+    <Label fx:id="label1" layoutX="21.0" layoutY="320.0" prefHeight="95.0" prefWidth="468.0" text="" />
+  </children>
+</AnchorPane>

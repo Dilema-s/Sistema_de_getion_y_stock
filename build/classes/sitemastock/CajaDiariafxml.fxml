@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sitemastock.CajaDiarialController">
+   <children>
+      <Text layoutX="503.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CAJA DIARIA" underline="true">
+         <font>
+            <Font size="27.0" />
+         </font></Text>
+      <TableView fx:id="tabla" layoutX="252.0" layoutY="119.0" prefHeight="312.0" prefWidth="758.0">
+        <columns>
+          <TableColumn prefWidth="132.0" text="Tipo de Movimiento">
+                <cellValueFactory>
+             <PropertyValueFactory property="tipoM" />
+           </cellValueFactory>
+         </TableColumn>
+            <TableColumn prefWidth="106.0" text="Monto">
+                  <cellValueFactory>
+             <PropertyValueFactory property="valor" />
+           </cellValueFactory>
+         </TableColumn>
+            <TableColumn prefWidth="414.0" text="Motivo">
+                  <cellValueFactory>
+             <PropertyValueFactory property="motivo" />
+           </cellValueFactory>
+         </TableColumn>
+        </columns>
+      </TableView>
+      <DatePicker fx:id="fecha1" layoutX="544.0" layoutY="80.0" onAction="#actualizar" />
+      <Text layoutX="473.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha" wrappingWidth="60.13671875">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+      <Button layoutX="957.0" layoutY="538.0" mnemonicParsing="false" onAction="#Volver" text="Volver">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+      <Label layoutX="764.0" layoutY="456.0" text="Total:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="total" layoutX="836.0" layoutY="451.0" prefHeight="36.0" prefWidth="174.0">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Button layoutX="280.0" layoutY="520.0" mnemonicParsing="false" onAction="#ventanaMovimientos" text="REGISTRAR MOVIMIENTO">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Text layoutX="152.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Realizar venta, compra u otras operaciones de caja" underline="true" wrappingWidth="463.0">
+         <font>
+            <Font size="20.0" />
+         </font></Text>
+      <Separator layoutX="144.0" layoutY="470.0" prefHeight="3.0" prefWidth="476.0" />
+   </children>
+</AnchorPane>

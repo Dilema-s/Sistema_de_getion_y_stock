@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sitemastock.Estadistica">
+   <children>
+      <Label layoutX="679.0" layoutY="92.0" prefHeight="25.0" prefWidth="47.0" text="AÑO:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="29.0" layoutY="47.0" text="INGRESE EL PRODUCTO:">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <AreaChart fx:id="grafico" layoutX="175.0" layoutY="136.0" prefHeight="405.0" prefWidth="842.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yAxis" side="LEFT" />
+        </yAxis>
+      </AreaChart>
+      <ComboBox fx:id="año" layoutX="719.0" layoutY="92.0" prefHeight="25.0" prefWidth="130.0" />
+      <TextField fx:id="buscar" layoutX="226.0" layoutY="45.0" prefHeight="25.0" prefWidth="459.0" promptText="Ingrese el producto que desea ver" />
+      <RadioButton fx:id="nombre" layoutX="317.0" layoutY="96.0" mnemonicParsing="false" selected="true" text="Nombre y descripción">
+         <toggleGroup>
+            <ToggleGroup fx:id="grupo1" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="codigo" layoutX="468.0" layoutY="96.0" mnemonicParsing="false" text="Código del producto" toggleGroup="$grupo1" />
+      <Button layoutX="1043.0" layoutY="569.0" mnemonicParsing="false" onAction="#volver" prefHeight="25.0" prefWidth="108.0" text="Volver" />
+      <Label layoutX="199.0" layoutY="96.0" prefHeight="21.0" prefWidth="94.0" text="BUSCAR POR:">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="923.0" layoutY="37.0" text="FECHA:">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label fx:id="now" layoutX="989.0" layoutY="37.0" prefHeight="25.0" prefWidth="108.0">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="993.0" layoutY="92.0" prefHeight="25.0" prefWidth="39.0" text="AÑO:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="año1" layoutX="1032.0" layoutY="92.0" prefHeight="25.0" prefWidth="130.0" />
+      <CheckBox fx:id="comparar" layoutX="881.0" layoutY="92.0" mnemonicParsing="false" onAction="#habilitaComparacion" prefHeight="25.0" prefWidth="108.0" text="Comparar con" />
+      
+   </children>
+</AnchorPane>

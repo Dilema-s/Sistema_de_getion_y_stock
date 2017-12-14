@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="465.0" prefWidth="662.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sitemastock.AgregarUsuario">
+  <children>
+    <Label fx:id="mensaje" layoutX="24.0" layoutY="273.0" prefHeight="110.0" prefWidth="414.0" text="" textFill="RED">
+      <font>
+        <Font name="Arial Bold" size="14.0" />
+      </font>
+    </Label>
+    <Label layoutX="100.0" layoutY="118.0" text="Apellido">
+      <font>
+        <Font name="Arial" size="12.0" fx:id="x2" />
+      </font>
+    </Label>
+    <Label font="$x2" layoutX="102.0" layoutY="169.0" text="Usuario" />
+    <Label font="$x2" layoutX="100.0" layoutY="212.0" text="Contraseña" />
+    <Label font="$x2" layoutX="100.0" layoutY="76.0" text="Nombre" />
+    <Separator layoutX="218.0" layoutY="61.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="19.0" />
+    <TextField fx:id="nombre" layoutX="252.0" layoutY="67.0" prefWidth="200.0" promptText="Ingrese nombre" />
+    <TextField fx:id="apellido" layoutX="252.0" layoutY="112.0" prefWidth="200.0" promptText="Ingrese apellido" />
+    <TextField fx:id="usuario" layoutX="252.0" layoutY="160.0" prefWidth="200.0" promptText="Ingrese usuario" />
+    <PasswordField fx:id="contraseña" layoutX="252.0" layoutY="206.0" prefWidth="200.0" promptText="Ingrese contraseña" />
+    <Button layoutX="479.0" layoutY="241.0" mnemonicParsing="false" onAction="#agregar" prefWidth="81.0" text="Aceptar" textAlignment="LEFT" textOverrun="ELLIPSIS">
+      <font>
+        <Font size="16.0" fx:id="x1" />
+      </font>
+      <tooltip>
+        <Tooltip text="Presione si los datos fueron ingresados" />
+      </tooltip>
+    </Button>
+    <Button fx:id="bt1" font="$x1" layoutX="479.0" layoutY="354.0" mnemonicParsing="false" onAction="#volver" prefWidth="81.0" text="Salir">
+      <tooltip>
+        <Tooltip text="Salir" />
+      </tooltip>
+    </Button>
+    <Text layoutX="182.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingreso de datos de Usuario">
+      <font>
+        <Font name="Arial" size="18.0" />
+      </font>
+    </Text>
+    <Separator layoutX="452.0" layoutY="299.0" prefHeight="29.0" prefWidth="134.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" focusTraversable="false" height="110.0" layoutX="14.0" layoutY="273.0" opacity="0.23" stroke="BLACK" strokeType="INSIDE" visible="true" width="424.0" />
+      <ComboBox fx:id="combo" layoutX="252.0" layoutY="241.0" prefWidth="150.0" />
+         
+      
+      <Label layoutX="100.0" layoutY="245.0" prefHeight="17.0" prefWidth="69.0" text="Permisos " />
+  </children>
+  <stylesheets>
+    <URL value="@AgregarUsuario.css" />
+  </stylesheets>
+</AnchorPane>

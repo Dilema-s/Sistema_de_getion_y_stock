@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="519.0" prefWidth="717.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sitemastock.MovimientoController">
+   <children>
+      <Label layoutX="73.0" layoutY="294.0" text="Motivo:" />
+      <Label layoutX="74.0" layoutY="232.0" text="Monto:" />
+      <TextField fx:id="monto" layoutX="158.0" layoutY="228.0" />
+      <Text layoutX="246.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Movimiento de caja" underline="true" wrappingWidth="223.443359375">
+         <font>
+            <Font name="Arial" size="25.0" />
+         </font>
+      </Text>
+      <TextArea fx:id="motivo" layoutX="158.0" layoutY="294.0" prefHeight="122.0" prefWidth="388.0" />
+      <RadioButton fx:id="ingreso" layoutX="167.0" layoutY="164.0" mnemonicParsing="false" text="INGRESO DE DINERO" textFill="#01dd17">
+         <toggleGroup>
+            <ToggleGroup fx:id="grupo" />
+         </toggleGroup>
+         <font>
+            <Font name="Arial Black" size="13.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="egreso" layoutX="358.0" layoutY="164.0" mnemonicParsing="false" text="EGRESO DE DINERO" textFill="#dd0808" toggleGroup="$grupo">
+         <font>
+            <Font name="Arial Black" size="13.0" />
+         </font>
+      </RadioButton>
+      <Text layoutX="132.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SELLECIONE EL TIPO DE OPERACIÓN QUE DESEA REALIZAR EN CAJA">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Separator layoutX="163.0" layoutY="154.0" prefHeight="1.0" prefWidth="361.0" />
+      <Separator layoutX="163.0" layoutY="194.0" prefHeight="3.0" prefWidth="361.0" />
+      <Label fx:id="fecha" layoutX="457.0" layoutY="70.0" />
+      
+      <Button onAction="#confirmar"  layoutX="443.0" layoutY="452.0" mnemonicParsing="false" text="CONFIRMAR" />
+      <Button onAction="#cancelar"  layoutX="548.0" layoutY="452.0" mnemonicParsing="false" text="CANCELAR" />
+   </children>
+</AnchorPane>

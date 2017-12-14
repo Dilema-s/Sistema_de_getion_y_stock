@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sitemastock.CajaController">
+  <children>
+    <HBox alignment="CENTER" layoutX="32.0" layoutY="25.0" prefHeight="342.0" prefWidth="532.0" spacing="20.0">
+      <children>
+        <Button mnemonicParsing="false" text="Venta" />
+        <Button mnemonicParsing="false" text="Compra" />
+        <Button mnemonicParsing="false" text="Caja Diaria" />
+        <Button mnemonicParsing="false" text="Consulta" />
+        <Button mnemonicParsing="false" text="Button" />
+      </children>
+    </HBox>
+  </children>
+</AnchorPane>

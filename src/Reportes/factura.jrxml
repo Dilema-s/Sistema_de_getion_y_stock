@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d67b310c-ad41-4c3e-a563-2f43daa2967c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Heading 1" fontSize="16" isBold="true"/>
+	<style name="Heading 2" fontSize="14" isBold="true" isItalic="true"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement style="Heading 1" x="29" y="8" width="496" height="63" uuid="9e7869bc-08b2-4d83-a2f9-16181fb893f3"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="40" y="13" width="164" height="58" uuid="de2e651c-7c5e-4a13-97f5-e6154677e947"/>
+				<textElement markup="none">
+					<font fontName="Algerian" size="34"/>
+				</textElement>
+				<text><![CDATA[PANAMBI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="204" y="24" width="112" height="36" uuid="bc5b331e-e399-49b5-98b7-7995c499b916"/>
+				<textElement markup="none">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Factura C]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

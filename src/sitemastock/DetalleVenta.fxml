@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sitemastock.DetalleVenta">
+   <children>
+      <TableView fx:id="tableView" layoutX="75.0" layoutY="150.0" prefHeight="200.0" prefWidth="650.0">
+        <columns>
+          <TableColumn prefWidth="153.0" text="Nombre producto">
+               <cellValueFactory>
+             <PropertyValueFactory property="nombre" />
+           </cellValueFactory>
+         </TableColumn>
+          <TableColumn minWidth="0.0" prefWidth="325.0" text="Descripción">
+               <cellValueFactory>
+             <PropertyValueFactory property="descripcion" />
+           </cellValueFactory>
+         </TableColumn>
+            <TableColumn prefWidth="171.0" text="Precio unitario">
+                 <cellValueFactory>
+             <PropertyValueFactory property="precio" />
+           </cellValueFactory>
+         </TableColumn>
+        </columns>
+      </TableView>
+      <Button fx:id="volver" layoutX="650.0" layoutY="417.0" mnemonicParsing="false" onAction="#volver" text="VOLVER" />
+      <Button fx:id="imprimir" layoutX="449.0" layoutY="417.0" mnemonicParsing="false" text="IMPRIMIR O GUARDAR" />
+      <Text fill="#095b11" layoutX="193.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DETALLE DE VENTA N°" underline="true">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Label fx:id="id_venta" layoutX="471.0" layoutY="28.0" prefHeight="32.0" prefWidth="117.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Text layoutX="127.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FECHA" underline="true">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="307.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CLIENTE" underline="true">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="501.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MONTO FINAL" underline="true">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Text>
+      <Label fx:id="fecha" layoutX="127.0" layoutY="112.0" prefHeight="25.0" prefWidth="139.0">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font></Label>
+      <Label fx:id="cliente" layoutX="307.0" layoutY="112.0" prefHeight="25.0" prefWidth="161.0">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font></Label>
+      <Label fx:id="total" layoutX="501.0" layoutY="110.0" prefHeight="25.0" prefWidth="175.0">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

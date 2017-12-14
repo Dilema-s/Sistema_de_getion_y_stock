@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sitemastock.EditarCliente">
+  <children>
+    <Button layoutX="645.0" layoutY="472.0" mnemonicParsing="false" onAction="#volver" text="Volver">
+      <font>
+        <Font size="16.0" fx:id="x1" />
+      </font>
+      <tooltip>
+        <Tooltip text="Vuelve a la lista de clientes" />
+      </tooltip>
+    </Button>
+    <GridPane layoutX="185.0" layoutY="125.0" prefHeight="319.0" prefWidth="377.0">
+      <children>
+        <Label font="$x1" prefWidth="123.0" text="Ingrese DNI" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Label font="$x1" prefWidth="123.0" text="Ingrese Nombre" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Label font="$x1" prefWidth="123.0" text="Ingrese Apellido" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Label font="$x1" prefWidth="123.0" text="Ingrese Telefono" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Label font="$x1" text="Ingrese Dirección" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <Label font="$x1" prefWidth="123.0" text="Ingrese Email" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <TextField fx:id="DNI" prefHeight="30.0" prefWidth="188.0" promptText="DNI" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <TextField fx:id="apellido" prefHeight="30.0" prefWidth="188.0" promptText="Apellido" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField fx:id="nombre" prefHeight="30.0" prefWidth="188.0" promptText="Nombre" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <TextField fx:id="telefono" prefHeight="30.0" prefWidth="188.0" promptText="Telefono" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <TextField fx:id="direccion" prefHeight="30.0" prefWidth="188.0" promptText="direccion" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <TextField fx:id="email" prefHeight="30.0" prefWidth="188.0" promptText="Email" text="yo@mail.com" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+    <Separator layoutX="604.0" layoutY="444.0" orientation="VERTICAL" prefHeight="94.0" prefWidth="30.0" />
+    <Button font="$x1" layoutX="510.0" layoutY="472.0" mnemonicParsing="false" text="Aceptar" onAction="#modificarDatos" >
+      <tooltip>
+        <Tooltip text="Envia los cambios realizados" />
+      </tooltip>
+    </Button>
+    <Text layoutX="304.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Editar cliente">
+      <font>
+        <Font size="24.0" />
+      </font>
+    </Text>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="138.0" layoutX="14.0" layoutY="419.0" opacity="0.13" stroke="BLACK" strokeType="INSIDE" width="468.0" />
+    <Label fx:id="label1" layoutX="14.0" layoutY="433.0" prefHeight="110.0" prefWidth="468.0" text="" />
+  </children>
+</AnchorPane>

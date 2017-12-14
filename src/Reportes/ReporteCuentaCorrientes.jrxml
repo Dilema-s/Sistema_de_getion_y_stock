@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="76091d93-8e31-4194-9447-0011cd244f14">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Heading 1" fontSize="16" isBold="true"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#FFFFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFFFE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Heading 2" fontSize="14" isBold="true" isItalic="true"/>
+	<style name="Heading 4" fontSize="12" isBold="true" isItalic="true"/>
+	<subDataset name="Table Dataset 1" uuid="c225ae78-7fc4-4482-bd70-fa293ed268cb"/>
+	<subDataset name="dataset1" uuid="acd8251b-11fe-42d0-8fc3-96480aee028a"/>
+	<subDataset name="dataset2" uuid="af52cc78-e8e8-4a21-92e9-cb4dcbf6ec0b"/>
+	<parameter name="id_venta" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     v.`id_venta_producto`,
+     p.`id_producto`,
+     p.`nombre`,
+     p.`precio`,
+     p.`descripcion`,
+     sold.`fecha`,
+     sold.`total`,
+     sold.`id_venta`,
+     c.`apellido`,
+     c.`direccion`,
+     c.`dni`
+FROM
+     `product` p INNER JOIN `venta_producto` v ON p.`id_producto` = v.`id_producto`
+     INNER JOIN `venta` sold ON v.`id_venta` = sold.`id_venta`
+     INNER JOIN `cliente` c ON sold.`cliente` = c.`id_cliente`
+WHERE
+     v.id_venta = 44]]>
+	</queryString>
+	<field name="id_venta_producto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_producto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="precio" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_venta" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellido" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dni" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement style="Heading 1" x="222" y="0" width="94" height="24" uuid="4641622c-ab01-4717-9399-5acd9679fd6f"/>
+				<text><![CDATA[Factura "C"]]></text>
+			</staticText>
+			<textField pattern="EEE, d MMM yyyy HH:mm:ss Z">
+				<reportElement x="455" y="4" width="100" height="20" uuid="4beea186-67e2-45e3-bd48-33f441fd2870"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Heading 1" x="-2" y="0" width="78" height="24" uuid="ca3476df-e35d-48c6-95b3-72cd250065f8"/>
+				<text><![CDATA[Panambi]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="95" splitType="Stretch">
+			<textField>
+				<reportElement style="Heading 2" x="187" y="0" width="276" height="34" uuid="61417697-1c19-401f-9115-01420518350d"/>
+				<textFieldExpression><![CDATA[$F{apellido}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Heading 1" x="76" y="0" width="111" height="34" uuid="e1ae1c4e-773c-4b5e-8cee-6a30750ff5ab"/>
+				<text><![CDATA[Señor(es):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Heading 1" x="76" y="34" width="111" height="29" uuid="89ca68c3-b59a-451d-82b6-c8d895b7be1c"/>
+				<text><![CDATA[Domicilio:]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="Heading 2" x="187" y="34" width="276" height="29" uuid="f5248e35-020c-4bc4-937b-6e6e4797667c"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Heading 1" x="76" y="63" width="111" height="29" uuid="ede5d016-59bb-4a0f-bfe5-91fd04adc91d"/>
+				<text><![CDATA[Cuit:]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="Heading 2" x="187" y="63" width="276" height="29" uuid="00510d97-1eb9-4498-a7b9-c3b92047d224"/>
+				<textFieldExpression><![CDATA[$F{dni}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement style="Heading 2" x="76" y="21" width="187" height="20" uuid="9398532c-d5d1-4d6c-819e-08f06a6d73db"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Detalle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Heading 2" x="263" y="21" width="100" height="20" uuid="2304e072-73ed-4eed-bf5f-ce90d32d812b"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[P. Unitario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Heading 2" x="363" y="21" width="100" height="20" uuid="692cad77-fbec-4278-b9ad-b3678c645276"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<line>
+				<reportElement x="76" y="41" width="387" height="1" uuid="f0838149-0d1c-43fc-8f93-8a34df3b864b"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="76" y="0" width="187" height="20" uuid="4ba62de2-658f-4715-87b5-b077e7bcc0f7"/>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="263" y="0" width="100" height="20" uuid="66e088db-430d-41f1-932b-8b9aae081639"/>
+				<textFieldExpression><![CDATA[$F{precio}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement style="Heading 1" x="363" y="0" width="100" height="31" uuid="527bd848-4607-40e1-b8bc-c2382caa9445"/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Heading 1" x="263" y="0" width="100" height="31" uuid="9e0ff483-66e2-48e4-9190-26d5da264510"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[TOTAL: $]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement style="Heading 4" x="455" y="22" width="100" height="20" uuid="0adddc57-6521-42e2-b269-ccc6d94a7239"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
